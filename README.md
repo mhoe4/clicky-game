@@ -1,4 +1,4 @@
-#Clicky-Game
+##Clicky-Game
 This react application is hosted on GitHub pages @ https://mhoef23.github.io/clicky-game/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
