@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Image from "./components/Image";
 import Wrapper from "./components/Wrapper";
+import Container from "./components/Container";
 import Title from "./components/Title";
 import images from "./images.json";
 
@@ -61,15 +62,18 @@ class App extends Component {
     return (
       <Wrapper>
         <Title>Clicky Game</Title>
-        {this.state.images.map(friend => (
-          <Image
-            clickImage={this.clickImage}
-            id={friend.id}
-            key={friend.id}
-            name={friend.name}
-            image={friend.image}
-          />
-        ))}
+        <Container>
+          {this.state.images.map(friend => (
+            <Image
+              clickImage={this.clickImage}
+              id={friend.id}
+              key={friend.id}
+              name={friend.name}
+              image={friend.image}
+            />
+          ))}
+        </Container>
+
       </Wrapper>
     );
   }
