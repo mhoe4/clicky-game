@@ -4,6 +4,7 @@ import Wrapper from "./components/Wrapper";
 import Container from "./components/Container";
 import Nav from "./components/Nav";
 import Title from "./components/Title";
+import Footer from "./components/Footer";
 import images from "./images.json";
 
 let clickedImages = [];
@@ -78,6 +79,7 @@ class App extends Component {
             />
           ))}
         </Container>
+        <Footer/>
 
       </Wrapper>
     );
