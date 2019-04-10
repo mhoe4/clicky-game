@@ -66,7 +66,7 @@ class App extends Component {
           score = {score}
           topScore = {topScore}
         />
-        <Title>Clicky Game</Title>
+        <Title/>
         <Container>
           {this.state.images.map(friend => (
             <Image
