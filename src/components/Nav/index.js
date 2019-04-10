@@ -8,7 +8,7 @@ function Nav(props) {
                 <div className="brand text-left">
                     <a href="/">Clicky Game</a>
                 </div>
-                <div className="banner text-center">Click an image to begin!</div>
+                <div className="banner text-center">{props.banner}</div>
                 <div className="score text-right">Score: {props.score} | Top Score: {props.topScore}</div>
             </div>
 

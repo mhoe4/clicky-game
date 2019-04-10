@@ -10,13 +10,15 @@ import images from "./images.json";
 let clickedImages = [];
 let score = 0;
 let topScore = 0;
+let banner = "Click an image to begin!";
 
 class App extends Component {
   // Setting this.state.images to the images json array
   state = {
     images,
     score,
-    topScore
+    topScore,
+    banner
   };
 
   clickImage = id => {
@@ -27,8 +29,8 @@ class App extends Component {
 
     //returns true if the id of the clicked image is found in clickedImages array
     if (clickedImages.find(checkForId)) {
-      console.log("You guessed incorrectly.");
-
+      // console.log("You guessed incorrectly.");
+      banner = "You guessed incorrectly.";
       //if current score > top score... set new top score
       if (score > topScore) {
         topScore = score
@@ -38,23 +40,26 @@ class App extends Component {
       score = 0;
       clickedImages.length = 0;
 
-      //setState to render new scores
-      this.setState({ score, topScore });
+      //setState to render new scores and banner
+      this.setState({ score, topScore, banner });
 
     } else { //image was clicked for the first time so...
-      console.log("You guessed correctly.");
+      // console.log("You guessed correctly.");
+      banner = "You guessed correctly.";
 
       //increment score
       score++;
       //add id of image to clicked images array 
       clickedImages.push(id);
+      //setState to render new banner
+      this.setState({ banner });
     };
 
-    console.log(`clickedImages: ${clickedImages} score: ${score}`);
+    // console.log(`clickedImages: ${clickedImages} score: ${score}`);
 
     //shuffle images array
     shuffle(images);
-    //console.log(images);
+    
     //setState to render shuffle on screen
     this.setState({ images });
   };
@@ -66,6 +71,7 @@ class App extends Component {
         <Nav 
           score = {score}
           topScore = {topScore}
+          banner = {banner}
         />
         <Title/>
         <Container>
