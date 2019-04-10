@@ -2,19 +2,13 @@ import React from "react";
 
 function Nav(props) {
     return (
-        // <div role="img" aria-label="click item" class="click-item" onClick={() => props.clickImage(props.id)} >
-        //     <img alt={props.name} src={props.image} />
-        // </div>
-        <nav class="navbar">
-            <ul>
-                <li class="brand">
-                    <a href="/">Clicky Game</a>
-                </li>
-                <li class="banner">Click an image to begin!</li>
-                <li class="score">Score: {props.state.score} | Top Score: {props.state.topScore}</li>
-            </ul>
+        <nav className="navbar">
+            <div className="brand text-left">
+                <a href="/">Clicky Game</a>
+            </div>
+            <div className="banner text-center">Click an image to begin!</div>
+            <div className="score text-right">Score: {props.score} | Top Score: {props.topScore}</div>
         </nav>
-
     );
 
 }

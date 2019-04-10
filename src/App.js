@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Image from "./components/Image";
 import Wrapper from "./components/Wrapper";
 import Container from "./components/Container";
+import Nav from "./components/Nav";
 import Title from "./components/Title";
 import images from "./images.json";
 
@@ -61,6 +62,10 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
+        <Nav 
+          score = {score}
+          topScore = {topScore}
+        />
         <Title>Clicky Game</Title>
         <Container>
           {this.state.images.map(friend => (
