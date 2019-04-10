@@ -1,6 +1,20 @@
-rm -rf node_modules/gh-pages/.cache
+#Clicky-Game
+This react application is hosted on GitHub pages @ https://mhoef23.github.io/clicky-game/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## How To Play
+The application renders different images to the screen.
+
+The application keeps track of the user's score. 
+
+The user's score is incremented when clicking an image for the first time. 
+
+Every time an image is clicked, the images rendered to the page shuffle themselves in a random order.
+
+The user's score is reset to 0 if they click the same image more than once.
+
+Once the user's score is reset after an incorrect guess, the game restarts.
 
 ## Available Scripts
 
